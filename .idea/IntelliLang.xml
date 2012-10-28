@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LanguageInjectionConfiguration">
+    <injection language="XHTML" injector-id="xml">
+      <display-name>outputText/@value</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("value")).withParent(xmlTag().withLocalName(string().equalTo("outputText")).withNamespace(string().equalTo("http://java.sun.com/jsf/html")))]]></place>
+    </injection>
+  </component>
+</project>
+

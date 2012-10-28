@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<script type="text/javascript">
+		function handleMessage(response) {
+			//parse message to json object
+			var object = JSON.parse(response);
+			//extract channel info and message content from json
+			var ch = object.channel;
+			var msg = object.message;
+			//find the right container and append the message
+			var pre = $('.' + ch).html();
+			$('.' + ch).html(pre + msg + '<br />');
+		}
+	</script>
+</h:head>
+<h:body>
+	<f:event listener="#{LogBroadcaster.initTracker}" type="preRenderView" />
+
+	<p:socket channel="/serverlog" onMessage="handleMessage" />
+
+	<h:form id="form">
+		<p:dataGrid var="server" value="#{LogBroadcaster.serverList}"
+			columns="2" rows="4">
+
+			<p:panel id="pnl" header="#{server}" toggleable="true"
+				closable="true" toggleSpeed="500" closeSpeed="500" widgetVar="panel">
+				<p:scrollPanel style="height:250px;">
+					<h:outputText class="#{server}" />
+				</p:scrollPanel>
+			</p:panel>
+		</p:dataGrid>
+	</h:form>
+
+
+</h:body>
+</html>

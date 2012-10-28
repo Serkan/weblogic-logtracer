@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="log-tracer:war exploded">
+    <output-path>$PROJECT_DIR$/target/log-tracer</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="log-tracer/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="log-tracer" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.4" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-runtime:1.0.0" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-jbossweb:1.0.0" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-tomcat:1.0.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.6" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-tomcat7:1.0.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-jdk14:1.6.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.6.6" />
+          <element id="library" level="project" name="Maven: javax.faces:jsf-api:2.1" />
+          <element id="library" level="project" name="Maven: javax.faces:jsf-impl:1.2_15" />
+          <element id="library" level="project" name="Maven: javax.faces:javax.faces-api:2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
